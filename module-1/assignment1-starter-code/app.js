@@ -10,7 +10,9 @@
         $scope.foodList = "";
 
         $scope.checkLunch = function(){
-            if ($scope.foodList.split(',').length > 3){
+            if ($scope.foodList === "") {
+                $scope.message = "Please enter data first";
+            } else if ($scope.foodList.split(',').length > 3){
                 $scope.message = "Too much!";
             } else {
                 $scope.message = "Enjoy!";
